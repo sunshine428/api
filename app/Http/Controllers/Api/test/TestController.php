@@ -60,7 +60,8 @@ class TestController extends Controller
      */
     public function show($id)
     {
-
+        $data=TestModel::where(['id'=>$id])->first();
+        return json_encode(['ret'=>200,'msg'=>'查询成功','data'=>$data]);
     }
 
     /**

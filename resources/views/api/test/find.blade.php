@@ -39,8 +39,7 @@
                 var age=$("[name='age']").val();
                 var id=getUrlParam('id');
                 $.ajax({
-                    url: url+"/"+id,
-                    type:"PUT",
+                    url: 'http://www.api.com/api/test_update',
                     dataType: "json",
                     data: {name:name,age:age,id:id},
                     success: function (res) {
